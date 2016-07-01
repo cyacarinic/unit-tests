@@ -15,7 +15,7 @@ RUN yum -y reinstall glibc-common  && yum clean all
 
 RUN mkdir /srv/www/
 WORKDIR /srv/www/
-ADD ./code /srv/www/tests
+ADD ./tests /srv/www/tests
 ADD ./requirements.txt /srv/www/
 RUN pip install -r requirements.txt
 

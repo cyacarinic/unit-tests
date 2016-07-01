@@ -15,21 +15,21 @@ $ docker-compose up -d
 ### MASIVE TESTS
 Colocar los scripts a testear en "./tests" y ejecutar:
 ```sh
-$ docker run python_tdd py.test tests/
+$ docker exec tdd_python py.test tests/
 ```
 o
 ```sh
-$ docker run python_tdd nosetests tests/
+$ docker exec tdd_python nosetests tests/
 ```
 Esto testeará todos los scripts dentro de "test" que lleven el prefijo "test_"
 
 ### INDIVIDUAL TESTS
 Colocar los scripts a testear en "./tests" y ejecutar:
  ```sh
-$ docker run python_tdd py.test tests/my_test_script.py
+$ docker exec tdd_python py.test tests/my_test_script.py
 ```
 o
 ```sh
-$ docker run python_tdd nosetests tests/my_test_script.py
+$ docker exec tdd_python nosetests tests/my_test_script.py
 ```
 Para testear solo el script "my_test_script.py"
